@@ -1,0 +1,79 @@
+#bt_edit {
+  color: #000;
+  text-align: center;
+}
+
+#bt_delete{
+  color: #f00;
+  text-align: center;
+}
+
+.btn.btn-primary {
+    background: #F00;
+    border-color: #F00;
+    color: #000;
+    align: center;
+}
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.45;
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+    border-color: #c65700;
+    background: #f00;
+}
+
+.ftco-bg-dark {
+    background: #f4e07a;
+}
+
+p{
+  text-align: center;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 350px;
+    height: 200px;
+
+}
+
+.gambar{
+  margin-left: 500px;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: #f4e07a;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+}
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    color: #f00;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: #f4e07a;
+}
+
+@media screen and (max-width: 991px)
+.ftco-navbar-light {
+    background: #f4e07a !important;
+    top: 0;
+    position: relative;
+}
