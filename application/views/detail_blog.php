@@ -29,7 +29,7 @@
 <h4>DiTulis Oleh:</h4>
 <p>
   <?php
-  echo "<a href='/user/" . $blog['user_ID'] ."'>" . $blog['nama']."<a><br>";
+  echo "<a href='/user/" . $blog['user_ID'] ."'>" . $blog['nama']."<a><br><br><br><br><br>";
   ?>
 </p>
 
@@ -37,10 +37,10 @@
 
 
     <div class="form-group" id="bt_edit">
-      <a href="/blog/delete/<?= $blog['blog_ID'] ?>">DELETE</a><br>
+      <a href="/blog/edit/<?= $blog['blog_ID'] ?>">  EDIT  </a><br>
     </div>
     <div class="form-group" id="bt_delete">
-      <a href="/blog/edit/<?= $blog['blog_ID'] ?>">EDIT</a><br>
+      <a href="/blog/delete/<?= $blog['blog_ID'] ?>"> DELETE        </a><br>
     </div>
 
 <br>
