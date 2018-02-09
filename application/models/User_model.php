@@ -23,6 +23,7 @@ class User_model extends CI_Model {
             'password' => md5( $this->input->post('pass1') ),
             'tgl_registrasi' => date('Y-m-d H:i:s')
           ];
+
     // simpan ke database dalam tabel 'users'
     $this->db->insert( 'users', $data );
   }
@@ -41,7 +42,10 @@ class User_model extends CI_Model {
   }
 
   public function userbyid($user_ID){
-    $sql = "SELECT nama FROM users WHERE user_ID = '".$user_ID."'";
+    $sql = "SELECT nama, email, judul, bahan,blog_ID, cara FROM `users`
+            INNER JOIN blogs ON users.user_ID = blogs.user_ID
+            WHERE users.user_ID ='".$user_ID."'";
+
     $query = $this->db->query( $sql );
     return $query->row_array();
   }

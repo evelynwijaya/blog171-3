@@ -69,7 +69,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
-    color: #f4e07a;
+      color: rgba(1,1,1,.5);
 }
 
 @media screen and (max-width: 991px)
@@ -77,4 +77,14 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
     background: #f4e07a !important;
     top: 0;
     position: relative;
+}
+
+.ftco-cover .ftco-heading {
+    font-size: 75px;
+    line-height: 1.34;
+    color: #f29d54;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(1,1,1,.5);
 }

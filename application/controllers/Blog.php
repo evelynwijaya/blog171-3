@@ -36,14 +36,15 @@ class Blog extends CI_Controller {
 
   move_uploaded_file($_FILES['foto']['tmp_name'],$file);
 
-redirect('home');
+  redirect('home');
   }
+
+
+
 
  public function delete($blog_ID){
    $this->blog_model->delete($blog_ID);
    redirect('home');
-
-
  }
 
  public function edit($blog_ID){
