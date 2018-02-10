@@ -1,3 +1,4 @@
+<br><br><br>
 <h1 class="mb-4" >Register Account</h1>
 <form action="/user/reg_submit" method="post">
   <div class="row">

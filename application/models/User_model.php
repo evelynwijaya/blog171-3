@@ -42,13 +42,19 @@ class User_model extends CI_Model {
   }
 
   public function userbyid($user_ID){
-    $sql = "SELECT nama, email, judul, bahan,blog_ID, cara FROM `users`
-            INNER JOIN blogs ON users.user_ID = blogs.user_ID
-            WHERE users.user_ID ='".$user_ID."'";
+    $sql = "SELECT users.nama,users.user_ID,users.email,blogs.judul,blogs.blog_ID FROM users
+            INNER JOIN blogs USING (user_ID)
+            WHERE users.user_ID = '".$user_ID."'";
+
+    $query = $this->db->query( $sql );
+    return $query->result_array();
+  }
+
+  public function userid($user_ID){
+    $sql = "SELECT nama,email FROM users WHERE user_ID= '".$user_ID."'";
 
     $query = $this->db->query( $sql );
     return $query->row_array();
-  }
 
-
+}
 }

@@ -36,14 +36,16 @@
 
 
 <?php
-  if($this->session->uid = $blog['user_ID']){
+  if(($this->session->uid)==$blog['user_ID']){
  ?>
+
   <div class="form-group" id="bt_edit">
     <a href="/blog/edit/<?= $blog['blog_ID'] ?>">  EDIT  </a><br>
   </div>
   <div class="form-group" id="bt_delete">
     <a href="/blog/delete/<?= $blog['blog_ID'] ?>"> DELETE  </a><br>
   </div>
+  
 <?php } ?>
 
 <br>

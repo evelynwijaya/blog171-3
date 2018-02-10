@@ -69,6 +69,7 @@ class User extends CI_Controller {
 
   public function profil($user_ID){
     $data['user'] = $this->user_model->userbyid($user_ID);
+    $data['userid'] = $this->user_model->userid($user_ID);
     $this->load->template('profil', $data);
 
   }
