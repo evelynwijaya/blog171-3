@@ -12,6 +12,7 @@ class Blog extends CI_Controller {
 
 	public function index( $blog_ID )	{
       $data['blog'] = $this->blog_model->blog( $blog_ID );
+      $data['comment'] = $this->blog_model->comment( $blog_ID );
       $this->load->template( 'detail_blog', $data );
 	}
 
@@ -37,6 +38,7 @@ class Blog extends CI_Controller {
   move_uploaded_file($_FILES['foto']['tmp_name'],$file);
 
   redirect('home');
+  $this->session->blog_id = $blog['blog_ID'];
   }
 
 

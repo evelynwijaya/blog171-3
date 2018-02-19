@@ -45,7 +45,54 @@
   <div class="form-group" id="bt_delete">
     <a href="/blog/delete/<?= $blog['blog_ID'] ?>"> DELETE  </a><br>
   </div>
-  
+
 <?php } ?>
 
 <br>
+
+
+<?php
+if (isset($this->session->uid)){
+ ?>
+
+  <h5 class="display-4">Share Your Opinion</h5>
+        <div class="col-md mb-5 ftco-animate">
+          <form action="/comment/submit/<?= $blog['blog_ID'] ?>" method="post">
+            <div class="form-group">
+              <input type="hidden" class="form-control" id="m_fname" name="blog_id" value="<?= $blog['blog_ID'] ?>">
+
+              <textarea cols="30" rows="10" name="comment" class="form-control" placeholder="Write your message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-lg" value="Send Message">
+            </div>
+          </form>
+        </div>
+
+ <!-- tampilan komentar -->
+ <?php
+ foreach( $comment as $comments ){
+   ?>
+      <div class="card text-center" id="comment">
+        <div class="card-header" id="kop">
+          <?php
+          echo "<a href='/user/" . $this->session->uid ."'>" . $comments['nama']."<a>";
+          ?>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><?= $comments['comment']?></p>
+        </div>
+        <div class="card-footer text-muted">
+          <?= $comments['tanggal']?>
+        </div>
+      </div>
+
+  <?php
+    }
+  ?>
+
+
+
+
+
+<?php } ?>

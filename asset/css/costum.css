@@ -9,6 +9,17 @@
   text-align: center;
 }
 
+#comment{
+  width: 1000px;
+ margin-left: 20px;
+ margin-top: 10px;
+
+}
+
+#kop{
+  text-align: left;
+
+}
 .btn.btn-primary {
     background: #F00;
     border-color: #F00;
@@ -45,7 +56,7 @@ img {
 }
 
 .gambar{
-  margin-left: 500px;
+  margin-left: 450px;
 }
 
 body {

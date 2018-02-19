@@ -26,6 +26,17 @@ class Blog_model extends CI_Model {
       return $query->result_array();
     }
 
+    public function comment( $blog_ID ){
+      $query = $this->db->query("SELECT users.user_ID,blogs.blog_ID, comment.comment_ID, comment.comment,comment.nama,comment.tanggal
+                                FROM users
+                                INNER JOIN blogs USING (user_ID)
+                                INNER JOIN comment ON (blogs.blog_ID=comment.blog_ID)
+                                WHERE comment.blog_ID ='".$blog_ID."'
+                                ORDER BY tanggal DESC");
+
+        return $query->result_array();
+    }
+
 
     /**   * menyimpan data blog baru   */
     public function submit(){

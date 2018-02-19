@@ -16,7 +16,7 @@ $route['user/reg_submit'] = 'user/regsubmit';  // proses registrasi user
 $route['user/login']      = 'user/login';      // halaman form login
 $route['user/(:any)']     = 'user/profil/$1';  // halaman profil user dengan user_id $1
 
-
+$route['comment/submit']     = 'comment/submit';     // proses penyimpanan blog
 
 $route['home']              = 'welcome/index';
 
