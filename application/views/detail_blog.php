@@ -75,9 +75,7 @@ if (isset($this->session->uid)){
    ?>
       <div class="card text-center" id="comment">
         <div class="card-header" id="kop">
-          <?php
-          echo "<a href='/user/" . $this->session->uid ."'>" . $comments['nama']."<a>";
-          ?>
+          <?=$comments['nama']?>
         </div>
         <div class="card-body">
           <p class="card-text"><?= $comments['comment']?></p>
